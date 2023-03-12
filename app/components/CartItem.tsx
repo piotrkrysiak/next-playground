@@ -1,25 +1,18 @@
 import ProductItem from '@/app/components/ProductItem';
-import { Product } from '@/app/ts';
-
-interface Props {
-  products: Product[];
-  total: number;
-  discountedTotal: number;
-  userId: number;
-  totalProducts: number;
-  totalQuantity: number;
-}
+import { Cart } from '@/app/ts';
+import Link from 'next/link';
 
 export default function CartItem({
+  id,
   products,
   total,
   discountedTotal,
   userId,
   totalProducts,
   totalQuantity,
-}: Props) {
+}: Cart) {
   return (
-    <div>
+    <Link href="/carts/[id]" as={`/carts/${id}`}>
       <h1>Cart</h1>
       <h2>Products</h2>
       {products.map((product) => (
@@ -39,6 +32,6 @@ export default function CartItem({
       <h2>User ID: {userId}</h2>
       <h2>Total Products: {totalProducts}</h2>
       <h2>Total Quantity: {totalQuantity}</h2>
-    </div>
+    </Link>
   );
 }

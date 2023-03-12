@@ -23,6 +23,7 @@ export default async function CartsPage() {
       {carts.map((cart) => (
         <CartItem
           key={cart.id}
+          id={cart.id}
           products={cart.products}
           total={cart.total}
           discountedTotal={cart.discountedTotal}
