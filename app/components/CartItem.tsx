@@ -13,7 +13,7 @@ export default function CartItem({
 }: Cart) {
   return (
     <Link href="/carts/[id]" as={`/carts/${id}`}>
-      <h1 className="bg-white xxs:bg-blue-500 xs:bg-white sm:bg-black md:bg-white lg:bg-black xl:bg-white">
+      <h1 className="bg-white xxs:bg-blue-500 xs:bg-white sm:bg-black md:bg-white lg:bg-black xl:bg-white font-bold">
         Cart
       </h1>
       <h2>Products</h2>

@@ -1,4 +1,11 @@
 import './globals.css';
+import { DM_Sans } from '@next/font/google';
+
+const dmSans = DM_Sans({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+});
 
 export const metadata = {
   title: 'Dashboard app',
@@ -12,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${dmSans.variable} font-sans`}>{children}</body>
     </html>
   );
 }

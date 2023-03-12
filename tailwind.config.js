@@ -12,6 +12,9 @@ module.exports = {
     },
     extend: {
       spacing: {},
+      fontFamily: {
+        sans: ['var(--font-dm-sans)'],
+      },
     },
   },
   plugins: [],
