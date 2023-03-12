@@ -13,7 +13,9 @@ export default function CartItem({
 }: Cart) {
   return (
     <Link href="/carts/[id]" as={`/carts/${id}`}>
-      <h1>Cart</h1>
+      <h1 className="bg-white xxs:bg-blue-500 xs:bg-white sm:bg-black md:bg-white lg:bg-black xl:bg-white">
+        Cart
+      </h1>
       <h2>Products</h2>
       {products.map((product) => (
         <ProductItem
